@@ -10,6 +10,7 @@ exports.AppModule = void 0;
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
+var http_1 = require("@angular/common/http");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 var searchuser_component_1 = require("./Componenets/searchuser/searchuser.component");
@@ -28,7 +29,8 @@ var AppModule = /** @class */ (function () {
                 platform_browser_1.BrowserModule,
                 app_routing_module_1.AppRoutingModule,
                 ng_bootstrap_1.NgbModule,
-                forms_1.FormsModule
+                forms_1.FormsModule,
+                http_1.HttpClientModule
             ],
             providers: [gitservice_service_1.GitserviceService],
             bootstrap: [app_component_1.AppComponent]
