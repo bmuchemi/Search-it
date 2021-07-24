@@ -9,19 +9,25 @@ exports.__esModule = true;
 exports.AppModule = void 0;
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var forms_1 = require("@angular/forms");
 var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
+var searchuser_component_1 = require("./Componenets/searchuser/searchuser.component");
+var ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             declarations: [
-                app_component_1.AppComponent
+                app_component_1.AppComponent,
+                searchuser_component_1.SearchuserComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
-                app_routing_module_1.AppRoutingModule
+                app_routing_module_1.AppRoutingModule,
+                ng_bootstrap_1.NgbModule,
+                forms_1.FormsModule
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

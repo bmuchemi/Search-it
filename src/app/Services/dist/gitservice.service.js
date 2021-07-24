@@ -10,7 +10,8 @@ exports.GitserviceService = void 0;
 var core_1 = require("@angular/core");
 var environment_1 = require("src/environments/environment");
 var GitserviceService = /** @class */ (function () {
-    function GitserviceService() {
+    function GitserviceService(http) {
+        this.http = http;
     }
     GitserviceService.prototype.getData = function () {
         return this.http.get("https://api.github.com/users/" + this.username + "?access_token=" + environment_1.environment.api_key);

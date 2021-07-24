@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./searchuser.component.css']
 })
 export class SearchuserComponent implements OnInit {
+  username: string;
 
   constructor(public dataService:GitserviceService) { }
 

@@ -5,8 +5,9 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class GitserviceService {
+  private username:string;
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
   getData(){
     return this.http.get("https://api.github.com/users/"+ this.username +"?access_token="+environment.api_key);
   }
