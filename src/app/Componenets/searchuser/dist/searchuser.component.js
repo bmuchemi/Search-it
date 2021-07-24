@@ -13,20 +13,14 @@ var SearchuserComponent = /** @class */ (function () {
         this.dataService = dataService;
     }
     SearchuserComponent.prototype.getUserData = function () {
-        var _this = this;
         this.dataService.getName(this.username);
         this.dataService.getData().subscribe(function (res) {
             console.log(res);
-            _this.profile = res;
         }, function (error) {
-            _this.profile = error;
-            document.getElementById('name').style.color = "red";
         });
         this.dataService.getRepos().subscribe(function (repo) {
             console.log(repo);
-            _this.work = repo;
-        }, function (error) {
-            _this.work = null;
+            ;
         });
     };
     SearchuserComponent.prototype.ngOnInit = function () {

@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   
 })
 export class SearchuserComponent implements OnInit {
-  username!: string;
+   username!: string;
 
   constructor(public dataService:GitserviceService) { }
 
@@ -18,17 +18,15 @@ export class SearchuserComponent implements OnInit {
     
     this.dataService.getData().subscribe(res => {
       console.log(res);
-      this.profile=res;
+     
     }, error => {
-      this.profile=error;
-      document.getElementById('name').style.color="red";
+      
+      
     });
 
     this.dataService.getRepos().subscribe(repo => {
       console.log(repo);
-      this.work=repo;
-    }, error => {
-      this.work=null;
+      ;
     });
   }
 

@@ -1,7 +1,7 @@
 <div class="container">
     <form class="form-inline form-group">
         <input class="form-control mr-2" type="text" name="search" placeholder="Serch user" id="search"  [(ngModel)]="username" >
-        <button class="btn btn-outline-success btn-submit"  type="submit">Search</button>
+        <button class="btn btn-outline-success btn-submit" (click)="getUserData()" type="submit">Search</button>
     </form>
     <div class="row">
         <div class="col-sm-6">
