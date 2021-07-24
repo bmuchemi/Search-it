@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchuserComponent } from './Componenets/searchuser/searchuser.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { GitserviceService } from './Services/gitservice.service';
 
 @NgModule({
   declarations: [
@@ -15,10 +16,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
     FormsModule
   ],
-  providers: [],
+  providers: [GitserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

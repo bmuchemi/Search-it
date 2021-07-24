@@ -1,13 +1,15 @@
 import { GitserviceService } from './../../Services/gitservice.service';
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-searchuser',
   templateUrl: './searchuser.component.html',
   styleUrls: ['./searchuser.component.css']
+  
 })
 export class SearchuserComponent implements OnInit {
-  username: string;
+  username!: string;
 
   constructor(public dataService:GitserviceService) { }
 
@@ -31,7 +33,5 @@ export class SearchuserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  
-
 }
 }

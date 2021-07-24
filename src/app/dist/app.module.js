@@ -14,6 +14,7 @@ var app_routing_module_1 = require("./app-routing.module");
 var app_component_1 = require("./app.component");
 var searchuser_component_1 = require("./Componenets/searchuser/searchuser.component");
 var ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
+var gitservice_service_1 = require("./Services/gitservice.service");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -29,7 +30,7 @@ var AppModule = /** @class */ (function () {
                 ng_bootstrap_1.NgbModule,
                 forms_1.FormsModule
             ],
-            providers: [],
+            providers: [gitservice_service_1.GitserviceService],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
