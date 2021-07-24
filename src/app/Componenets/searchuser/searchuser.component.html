@@ -1,15 +1,6 @@
 <div class="container">
     <form class="form-inline form-group">
-        <input class="form-control mr-2" type="text" name="search" placeholder="All of github" id="search" [(ngModel)]="username">
-        <button class="btn btn-outline-success btn-submit" (click)="findProfile()" type="submit">Search</button>
+        <input class="form-control mr-2" type="text" name="search" placeholder="Serch users" id="search" >
+        <button class="btn btn-outline-success btn-submit"  type="submit">Search</button>
     </form>
 
-    <p id="error"></p>
-    <div class="card" *ngIf="profile">
-        <div class="card-header">
-            <button (click)=toggleRepo() class="btn btn-success float-right">REPOS</button>
-            <a href="{{profile.html_url}}" target="_blank">
-                <h3 appHover class="text-success">{{profile.login}} </h3>
-            </a>
-            <span>{{profile.bio}}</span>
-        </div>
