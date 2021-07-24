@@ -1,5 +1,6 @@
 import { GitserviceService } from './../../Services/gitservice.service';
 import { Component, OnInit } from '@angular/core';
+import { Gituser } from 'src/app/Class/gituser';
 
 
 @Component({
