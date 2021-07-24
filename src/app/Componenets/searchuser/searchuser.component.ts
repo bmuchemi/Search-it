@@ -10,7 +10,21 @@ export class SearchuserComponent implements OnInit {
   constructor() { }
 
   getUserData() {
+    this.dataService.getName(this.username);
     
+    this.dataService.getData().subscribe(res => {
+      console.log(res);
+      this.profile=res;
+    }, error => {
+      this.profile=error;
+      document.getElementById('name').style.color="red";
+    });
+
+    this.dataService.getRepos().subscribe(repo => {
+      console.log(repo);
+      this.work=repo;
+    }, error => {
+      this.work=null;
   }
 
   ngOnInit(): void {

@@ -12,8 +12,21 @@ var SearchuserComponent = /** @class */ (function () {
     function SearchuserComponent() {
     }
     SearchuserComponent.prototype.getUserData = function () {
-    };
-    SearchuserComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.dataService.getName(this.username);
+        this.dataService.getData().subscribe(function (res) {
+            console.log(res);
+            _this.profile = res;
+        }, function (error) {
+            _this.profile = error;
+            document.getElementById('name').style.color = "red";
+        });
+        this.dataService.getRepos().subscribe(function (repo) {
+            console.log(repo);
+            _this.work = repo;
+        }, function (error) {
+            _this.work = null;
+        }, ngOnInit(), void {});
     };
     SearchuserComponent = __decorate([
         core_1.Component({
