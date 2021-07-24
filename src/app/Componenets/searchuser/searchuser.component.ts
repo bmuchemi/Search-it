@@ -9,6 +9,10 @@ export class SearchuserComponent implements OnInit {
 
   constructor() { }
 
+  getUserData() {
+    
+  }
+
   ngOnInit(): void {
   }
 
