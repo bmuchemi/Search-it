@@ -8,14 +8,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.GitserviceService = void 0;
 var core_1 = require("@angular/core");
+var environment_1 = require("src/environments/environment");
 var GitserviceService = /** @class */ (function () {
     function GitserviceService() {
     }
     GitserviceService.prototype.getData = function () {
-        return this.http.get("https://api.github.com/users/" + this.username + "?access_token=" + environment.api_key);
+        return this.http.get("https://api.github.com/users/" + this.username + "?access_token=" + environment_1.environment.api_key);
     };
     GitserviceService.prototype.getRepos = function () {
-        return this.http.get("https://api.github.com/users/" + this.username + "/repos?access_token=" + environment.api_key);
+        return this.http.get("https://api.github.com/users/" + this.username + "/repos?access_token=" + environment_1.environment.api_key);
     };
     GitserviceService.prototype.getName = function (username) {
         this.username = username;
