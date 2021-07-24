@@ -1,3 +1,4 @@
+import { GitserviceService } from './../../Services/gitservice.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchuserComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dataService:GitserviceService) { }
 
   getUserData() {
     this.dataService.getName(this.username);
@@ -25,9 +26,11 @@ export class SearchuserComponent implements OnInit {
       this.work=repo;
     }, error => {
       this.work=null;
+    });
   }
 
   ngOnInit(): void {
-  }
+  
 
+}
 }

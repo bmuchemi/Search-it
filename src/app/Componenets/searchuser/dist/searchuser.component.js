@@ -9,7 +9,8 @@ exports.__esModule = true;
 exports.SearchuserComponent = void 0;
 var core_1 = require("@angular/core");
 var SearchuserComponent = /** @class */ (function () {
-    function SearchuserComponent() {
+    function SearchuserComponent(dataService) {
+        this.dataService = dataService;
     }
     SearchuserComponent.prototype.getUserData = function () {
         var _this = this;
@@ -26,7 +27,9 @@ var SearchuserComponent = /** @class */ (function () {
             _this.work = repo;
         }, function (error) {
             _this.work = null;
-        }, ngOnInit(), void {});
+        });
+    };
+    SearchuserComponent.prototype.ngOnInit = function () {
     };
     SearchuserComponent = __decorate([
         core_1.Component({
