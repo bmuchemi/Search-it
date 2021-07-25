@@ -8,13 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchUserComponent } from './Componenets/searchuser/searchuser.component';
 import { GitserviceService } from './Services/gitservice.service';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchUserComponent,
-    FormComponent
+    FormComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
