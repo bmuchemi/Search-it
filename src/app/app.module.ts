@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchUserComponent } from './Componenets/searchuser/searchuser.component';
 import { GitserviceService } from './Services/gitservice.service';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavComponent } from './Componenets/nav/nav.component';
 
 
 @NgModule({
@@ -16,7 +16,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
     SearchUserComponent,
     FormComponent,
-    NavbarComponent
+    NavComponent,
+   
   ],
   imports: [
     BrowserModule,

@@ -1,8 +1,13 @@
 <div class="container">
+ <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand"><img src="https://api.freelogodesign.org/files/0aea9e61a7c14ab08f097be28c136a28/thumb/logo_200x200.png?v=0" height="100%" width="100%" alt=""></a>
     <form class="form-inline form-group">
         <input class="form-control mr-2" type="text" name="search" placeholder="Search users..." id="search" [(ngModel)]="username">
         <button class="btn btn-outline-success btn-submit" (click)="getUserData()" type="submit">Search</button>
     </form>
+ </nav>
+ <br>
+ <br>
     
     <div class="card" *ngIf="data">
         <div class="card-header">

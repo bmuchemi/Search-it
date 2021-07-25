@@ -24,7 +24,7 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 app_component_1.AppComponent,
                 searchuser_component_1.SearchUserComponent,
-                form_component_1.FormComponent
+                form_component_1.FormComponent,
             ],
             imports: [
                 platform_browser_1.BrowserModule,

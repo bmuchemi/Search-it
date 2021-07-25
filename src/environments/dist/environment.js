@@ -6,7 +6,7 @@ exports.__esModule = true;
 exports.environment = void 0;
 exports.environment = {
     production: false,
-    api_key: "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"
+    api_key: ""
 };
 //GITHUB API KEY
 //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
