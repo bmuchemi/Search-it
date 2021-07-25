@@ -1,0 +1,31 @@
+.foot h1 {
+    color: white;
+    padding-left: 40%;
+}
+
+.foot {
+    background-color: #202721;
+}
+
+.foot .col-md-2 {
+    color: white;
+}
+
+.foot .footer {
+    color: white;
+    padding-left: 40%;
+}
+
+.row {
+    padding-left: 30%;
+}
+
+.foo {
+     padding-left: 25%;
+}
+
+.text-justify {
+    padding-top: 5%;
+    font-weight: 600;
+    font-size: larger;
+}

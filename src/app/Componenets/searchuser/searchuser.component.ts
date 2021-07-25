@@ -1,7 +1,7 @@
 
 import { GitserviceService } from './../../Services/gitservice.service';
 import { Component, OnInit, } from '@angular/core';
-import { DateconvertPipe } from 'src/app/Pipes/dateconvert.pipe';
+
 
 @Component({
   selector: 'app-searchuser',
