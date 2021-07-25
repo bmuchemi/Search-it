@@ -6,32 +6,47 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.SearchuserComponent = void 0;
+exports.SearchUserComponent = void 0;
+var gitservice_service_1 = require("./../../Services/gitservice.service");
 var core_1 = require("@angular/core");
-var SearchuserComponent = /** @class */ (function () {
-    function SearchuserComponent(dataService) {
-        this.dataService = dataService;
+var SearchUserComponent = /** @class */ (function () {
+    function SearchUserComponent(getData) {
+        this.getData = getData;
+        this.display = true;
+        this.hide = false;
     }
-    SearchuserComponent.prototype.getUserData = function () {
-        this.dataService.getName(this.username);
-        this.dataService.getData().subscribe(function (res) {
+    SearchUserComponent.prototype.getUserData = function () {
+        var _this = this;
+        this.getData.getName(this.username);
+        this.getData.getData().subscribe(function (res) {
             console.log(res);
+            _this.data = res;
         }, function (error) {
+            _this.data = error;
         });
-        this.dataService.getRepos().subscribe(function (repo) {
+        this.getData.getRepos().subscribe(function (repo) {
             console.log(repo);
-            ;
+            _this.work = repo;
+        }, function (error) {
+            _this.work = null;
         });
     };
-    SearchuserComponent.prototype.ngOnInit = function () {
+    SearchUserComponent.prototype.viewRepositories = function () {
+        this.display = !this.display;
+        this.hide = !this.hide;
     };
-    SearchuserComponent = __decorate([
+    SearchUserComponent.prototype.ngOnInit = function () {
+        this.username = 'bmuchemi';
+        this.getUserData();
+    };
+    SearchUserComponent = __decorate([
         core_1.Component({
             selector: 'app-searchuser',
             templateUrl: './searchuser.component.html',
-            styleUrls: ['./searchuser.component.css']
+            styleUrls: ['./searchuser.component.css'],
+            providers: [gitservice_service_1.GitserviceService]
         })
-    ], SearchuserComponent);
-    return SearchuserComponent;
+    ], SearchUserComponent);
+    return SearchUserComponent;
 }());
-exports.SearchuserComponent = SearchuserComponent;
+exports.SearchUserComponent = SearchUserComponent;

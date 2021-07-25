@@ -1,36 +1,50 @@
-import { GitserviceService } from './../../Services/gitservice.service';
-import { Component, OnInit } from '@angular/core';
-import { Gituser } from 'src/app/Class/gituser';
 
+import { GitserviceService } from './../../Services/gitservice.service';
+import { Component, OnInit, } from '@angular/core';
 
 @Component({
   selector: 'app-searchuser',
   templateUrl: './searchuser.component.html',
-  styleUrls: ['./searchuser.component.css']
-  
+  styleUrls: ['./searchuser.component.css'],
+  providers:[GitserviceService]
 })
-export class SearchuserComponent implements OnInit {
-   username!: string;
+export class SearchUserComponent implements OnInit {
+  username!: string;
+  data : any;
+  work : any;
 
-  constructor(public dataService:GitserviceService) { }
+  display=true;
+  hide=false;
+  constructor(public getData:GitserviceService,){
+  }
 
-  getUserData() {
-    this.dataService.getName(this.username);
+  getUserData(){
+    this.getData.getName(this.username);
     
-    this.dataService.getData().subscribe(res => {
+    this.getData.getData().subscribe(res => {
       console.log(res);
-     
+      this.data=res;
     }, error => {
-      
+      this.data=error;
       
     });
 
-    this.dataService.getRepos().subscribe(repo => {
+    this.getData.getRepos().subscribe(repo => {
       console.log(repo);
-      ;
+      this.work=repo;
+    }, error => {
+      this.work=null;
     });
   }
 
+  viewRepositories(){
+    this.display=!this.display;
+    this.hide=!this.hide;
+  }
+
   ngOnInit(): void {
-}
+    this.username = 'bmuchemi';
+    this.getUserData()
+  }
+
 }
