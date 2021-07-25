@@ -1,14 +1,13 @@
-
-import { GitserviceService } from './../../Services/gitservice.service';
-import { Component, OnInit, } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { GitserviceService } from 'src/app/Services/gitservice.service';
 
 @Component({
-  selector: 'app-searchuser',
-  templateUrl: './searchuser.component.html',
-  styleUrls: ['./searchuser.component.css'],
-  providers:[GitserviceService]
+  selector: 'app-form',
+  templateUrl: './form.component.html',
+  styleUrls: ['./form.component.css']
 })
-export class SearchUserComponent implements OnInit {
+export class FormComponent implements OnInit {
+
   username!: string;
   data : any;
   work : any;
@@ -42,9 +41,8 @@ export class SearchUserComponent implements OnInit {
     this.display=!this.display;
     this.hide=!this.hide;
   }
+
   ngOnInit(): void {
-    this.username = 'bmuchemi';
-    this.getUserData()
   }
 
 }

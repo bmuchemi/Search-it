@@ -1,3 +1,4 @@
+import { FormComponent } from './Componenets/form/form.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'
@@ -12,8 +13,8 @@ import { GitserviceService } from './Services/gitservice.service';
 @NgModule({
   declarations: [
     AppComponent,
-    SearchUserComponent
-    
+    SearchUserComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

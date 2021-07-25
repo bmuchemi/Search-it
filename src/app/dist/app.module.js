@@ -7,6 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 exports.__esModule = true;
 exports.AppModule = void 0;
+var form_component_1 = require("./Componenets/form/form.component");
 var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
@@ -22,7 +23,8 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             declarations: [
                 app_component_1.AppComponent,
-                searchuser_component_1.SearchUserComponent
+                searchuser_component_1.SearchUserComponent,
+                form_component_1.FormComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,

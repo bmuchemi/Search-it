@@ -14,10 +14,10 @@ var GitserviceService = /** @class */ (function () {
         this.http = http;
     }
     GitserviceService.prototype.getData = function () {
-        return this.http.get("https://api.github.com/users/" + this.username + "?access_token=" + environment_1.environment.api_key);
+        return this.http.get("https://api.github.com/users/" + this.username + "?Authorization HTTP=" + environment_1.environment.api_key);
     };
     GitserviceService.prototype.getRepos = function () {
-        return this.http.get("https://api.github.com/users/" + this.username + "/repos?access_token=" + environment_1.environment.api_key);
+        return this.http.get("https://api.github.com/users/" + this.username + "/repos?Authorization HTTP=" + environment_1.environment.api_key);
     };
     GitserviceService.prototype.getName = function (username) {
         this.username = username;
