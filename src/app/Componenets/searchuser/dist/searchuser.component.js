@@ -12,6 +12,7 @@ var core_1 = require("@angular/core");
 var SearchUserComponent = /** @class */ (function () {
     function SearchUserComponent(getData) {
         this.getData = getData;
+        this.now = new Date();
         this.display = true;
         this.hide = false;
     }

@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { SearchUserComponent } from './Componenets/searchuser/searchuser.component';
 import { GitserviceService } from './Services/gitservice.service';
 import { NavComponent } from './Componenets/nav/nav.component';
+import { DateconvertPipe } from './Pipes/dateconvert.pipe';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { NavComponent } from './Componenets/nav/nav.component';
     SearchUserComponent,
     FormComponent,
     NavComponent,
+    DateconvertPipe,
    
   ],
   imports: [
