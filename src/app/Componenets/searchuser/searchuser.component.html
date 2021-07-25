@@ -13,7 +13,7 @@
         <div class="card-header">
             <button [hidden]="display"(click)="viewRepositories()" class="btn btn-success float-right">Go back</button>
             <a href="{{data.html_url}}" target="_blank">
-                <h3 appHover class="text-success">{{data.login}} </h3>
+                <h3 style="padding-left: 40%; color: crimson; font-style: oblique; font-weight: 900; font-size: xx-large;">{{data.login}} </h3>
             </a>
            
         </div>
@@ -21,15 +21,17 @@
             <div class="col-sm-6">
                 <ul  class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <span class="badge badge-light mr-2" style="color: red;">FOLLOWERS: {{data.followers}}</span>
-                        <span class="badge badge-light mr-2">FOLLOWING: {{data.following}}</span>
-                        <span class="badge badge-light mr-2">REPOSITORIES: {{data.public_repos}}</span>
+                        <span class="badge badge-light mr-2" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: larger;">FOLLOWERS: {{data.followers}}</span>
+                        <span class="badge badge-light mr-2" style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: larger;">FOLLOWING: {{data.following}}</span>
+                        <span class="badge badge-light mr-2"style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size: larger;">REPOSITORIES: {{data.public_repos}}</span>
                     </li>
-                    <li id="name" class="list-group-item">{{data.name}}</li>
-                    <li id="date" class="list-group-item">Last Active: {{data.updated_at}}
-                    <li id="date" class="list-group-item">Created At: {{data.created_at}}</li>
+                    <li  class="list-group-item">NAME :{{data.name}}</li>
+                    <li  class="list-group-item">Last Active: {{data.updated_at}}
+                    <li  class="list-group-item">Created At: {{data.created_at}}</li>
                 </ul>
-                <button (click)="viewRepositories()" class="btn btn-danger float-bottom">REPOSITORIES</button>
+                <hr>
+               <br>
+                <button (click)="viewRepositories()" class="btn btn-success float-bottom">REPOSITORIES</button>
             </div>
             <div class="col-sm-6">
                 <img  src="{{data.avatar_url}}">
