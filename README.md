@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+##BDD
+
+INPUT:Github username or repository
+OUTPUT: The users list of repositories and hid/her profile
+
+##BUGS
+When one fails to input anything in the form it does not open the right page,but I will be sure to correct it soon.
+
+
